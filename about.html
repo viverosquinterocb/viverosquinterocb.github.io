@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <title>Olivos del Valle - Vivero de Olivos</title>
+
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <style>
+    /* Navbar */
+    .navbar-custom {
+      background-color: rgba(255,255,255,0.95);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .navbar-custom .nav-link { color: #333; font-weight: 500; transition: 0.3s; }
+    .navbar-custom .nav-link:hover { color: #7a9e3f; }
+    .navbar-custom .navbar-brand img { height: 60px; }
+
+    /* Dropdown moderno */
+    .dropdown-menu-custom {
+      min-width: 180px;
+      background-color: #f8f9f8;
+      border-radius: 8px;
+      padding: 0.5rem 0;
+      transition: all 0.3s ease;
+    }
+    .dropdown-menu-custom .dropdown-item {
+      padding: 0.6rem 1.5rem;
+      transition: all 0.3s ease;
+    }
+    .dropdown-menu-custom .dropdown-item:hover {
+      background-color: #7a9e3f;
+      color: #fff;
+    }
+    @media (max-width: 992px) {
+      .dropdown-menu-custom {
+        background-color: #7a9e3f;
+        border-radius: 8px;
+      }
+      .dropdown-menu-custom .dropdown-item {
+        color: #fff;
+      }
+      .dropdown-menu-custom .dropdown-item:hover {
+        background-color: #60892d;
+      }
+    }
+
+    /* Barra superior */
+    .main-top { background-color: #7a9e3f; color: #f8f9f8; font-size: 0.95rem; padding: 8px 0; }
+    .main-top a { color: #fff; text-decoration: none; margin-left: 10px; }
+    .main-top a:hover { text-decoration: underline; }
+
+    /* Slider / Carousel */
+    #heroCarousel { position: relative; }
+    #heroCarousel .carousel-item { height: 90vh; min-height: 400px; background-size: cover; background-position: center; position: relative; }
+    #heroCarousel .carousel-caption { bottom: 50%; transform: translateY(50%); }
+    #heroCarousel .carousel-caption h1 { font-size: 3rem; font-weight: 700; text-shadow: 2px 2px 8px rgba(0,0,0,0.6); }
+    #heroCarousel .carousel-caption p { font-size: 1.2rem; text-shadow: 1px 1px 5px rgba(0,0,0,0.6); }
+    .btn-custom { background-color: #7a9e3f; color: #fff; border-radius: 30px; padding: 10px 25px; font-weight: 600; transition: 0.3s; }
+    .btn-custom:hover { background-color: #60892d; }
+
+    /* Animación letras título sin cortar palabras */
+    .animated-title .word { display: inline-block; white-space: nowrap; margin-right: 0.25em; }
+    .animated-title .char {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+    }
+    .animated-title .char.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Carousel indicators */
+    .carousel-indicators [data-bs-target] { background-color: #ccc; }
+    .carousel-indicators .active { background-color: #7a9e3f; }
+
+    /* Sections */
+    section { padding: 80px 0; }
+    .latest-blog h2, .about-box-main h2 { color: #3c763d; font-weight: 600; margin-bottom: 15px; }
+
+    /* Cards */
+    .card { border: none; border-radius: 10px; overflow: hidden; }
+    .card img { border-radius: 10px 10px 0 0; }
+    .card-body { background-color: #fff; }
+
+    /* Footer */
+    footer { background: #2e2e2e; color: #ccc; padding: 60px 0; }
+    footer a { color: #f8f9fa; text-decoration: none; transition: 0.3s; }
+    footer a:hover { text-decoration: underline; color: #7a9e3f; }
+    .footer-copyright {
+      background: #2e2e2e;
+      color: #aaa;
+      text-align: center;
+      padding: 12px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra superior -->
+  <div class="main-top bg-success text-light py-2">
+    <div class="container">
+      <div class="row align-items-center text-center text-md-start">
+        <div class="col-12 col-md-6 mb-2 mb-md-0" data-aos="fade-right">
+          Bienvenido a <strong>Viveros Quintero CB</strong> — Pasión por el cultivo sostenible.
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end flex-wrap" data-aos="fade-left">
+          <a href="tel:+34000" class="text-light me-3 mb-1 mb-md-0">
+            <i class="fas fa-phone-alt"></i> +34 666 213 683
+          </a>
+          <a href="mailto:info@olivosdelvalle.com" class="text-light mb-1 mb-md-0">
+            <i class="fas fa-envelope"></i> quinteroantoniocb@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light navbar-custom sticky-top" data-aos="fade-down">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo Olivos del Valle"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">Sobre Nosotros</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Variedades</a>
+            <ul class="dropdown-menu dropdown-menu-custom">
+              <li><a class="dropdown-item" href="variedades/picual.html">Picual</a></li>
+              <li><a class="dropdown-item" href="variedades/arbequina.html">Arbequina</a></li>
+              <li><a class="dropdown-item" href="variedades/hojiblanca.html">Hojiblanca</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</br>
+  <!-- Start About Page  -->
+
+ <!-- SOBRE NOSOTROS -->
+<section class="about-box-main py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="banner-frame">
+          <img class="img-fluid rounded shadow" src="images/about-img.jpg" alt="Viveros Quintero Olivos del Valle" />
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <h2 class="section-title">Somos <span>Viveros Quintero CB</span></h2>
+        <p>
+          En <strong>Viveros Quintero C.B.</strong>, llevamos décadas
+          dedicándonos con pasión al cultivo, producción y venta de olivos de alta calidad. Nuestro trabajo combina tradición familiar,
+          innovación agrícola y una gestión sostenible del entorno natural.
+        </p>
+        <p>
+          Cada planta es el resultado de años de experiencia, selección de variedades resistentes y un cuidado diario que garantiza
+          su crecimiento vigoroso. Ya sea para explotaciones agrícolas profesionales o para proyectos particulares, nuestros olivos
+          son símbolo de vida, resistencia y belleza mediterránea.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ ELEGIRNOS -->
+<section class="about-box-main bg-light py-5">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2>¿Por qué elegir <span>nuestros viveros?</span></h2>
+      <p>En Olivos del Valle combinamos tradición, innovación y compromiso con la calidad para ofrecer el mejor servicio en el sector del olivar.</p>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-seedling fa-3x mb-3 text-success"></i>
+        <h5>Calidad y Confianza</h5>
+        <p>
+          Todos nuestros olivos son cultivados en condiciones óptimas, bajo control técnico especializado y siguiendo buenas prácticas agrícolas. 
+          Garantizamos plantas sanas, certificadas y listas para enraizar con éxito.
+        </p>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-tractor fa-3x mb-3 text-success"></i>
+        <h5>Experiencia Familiar</h5>
+        <p>
+          Más de 20 años de trayectoria en el sector del viverismo nos respaldan. Nuestra experiencia nos permite ofrecer asesoramiento 
+          personalizado para cada tipo de suelo, clima y objetivo de cultivo.
+        </p>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-handshake fa-3x mb-3 text-success"></i>
+        <h5>Trato Directo</h5>
+        <p>
+          Somos productores directos. Sin intermediarios. Desde el vivero hasta tu plantación, te acompañamos en cada paso para asegurar 
+          los mejores resultados.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+<footer class="bg-dark text-light pt-5 pb-3">
+  <div class="container">
+    <div class="row justify-content-center text-center text-md-start">
+      
+      <!-- Horario -->
+      <div class="col-12 col-md-4 mb-4" data-aos="fade-up">
+        <h5 class="fw-semibold text-uppercase mb-3">Horario</h5>
+        <p class="mb-0">Lunes - Viernes: 08:00 - 17:00</p>
+        <p class="mb-0">Sábado: 10:00 - 14:00</p>
+        <p class="mb-0">Domingo: Cerrado</p>
+      </div>
+
+      <!-- Enlaces -->
+      <div class="col-12 col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <h5 class="fw-semibold text-uppercase mb-3">Enlaces</h5>
+        <ul class="list-unstyled">
+          <li><a href="about.html" class="text-light text-decoration-none d-block py-1">Sobre Nosotros</a></li>
+          <li><a href="gallery.html" class="text-light text-decoration-none d-block py-1">Galería</a></li>
+          <li><a href="contact.html" class="text-light text-decoration-none d-block py-1">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Contáctanos -->
+      <div class="col-12 col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <h5 class="fw-semibold text-uppercase mb-3">Contáctanos</h5>
+        
+        <p class="mb-2">
+          <i class="fas fa-map-marker-alt text-success me-2"></i>
+          <a href="ubicaciones.html" class="text-light text-decoration-none">
+            Ubicaciones
+          </a>
+        </p>
+
+        <p class="mb-2">
+          <i class="fas fa-phone text-success me-2"></i>
+          <a href="tel:+34666213683" class="text-light text-decoration-none">+34 666 213 683</a>
+        </p>
+
+        <p class="mb-0">
+          <i class="fas fa-envelope text-success me-2"></i>
+          <a href="mailto:quinteroantoniocb@gmail.com" class="text-light text-decoration-none">
+            quinteroantoniocb@gmail.com
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Línea inferior -->
+    <div class="text-center mt-4 border-top border-secondary pt-3" data-aos="fade-up" data-aos-delay="300">
+      © 2025 <strong>Viveros Quintero C.B.</strong> — Todos los derechos reservados
+    </div>
+  </div>
+</footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+  AOS.init({ duration: 1000, once: true });
+
+  // Animación letra por letra sin cortar palabras y ajustando tamaño
+  function animateTitles() {
+    document.querySelectorAll('.animated-title').forEach(title => {
+      const words = title.textContent.trim().split(' ');
+      title.textContent = '';
+
+      words.forEach((word, wIdx) => {
+        const wordSpan = document.createElement('span');
+        wordSpan.classList.add('word');
+        word.split('').forEach((char, cIdx) => {
+          const charSpan = document.createElement('span');
+          charSpan.textContent = char;
+          charSpan.classList.add('char');
+          wordSpan.appendChild(charSpan);
+
+          // Animación letra por letra
+          setTimeout(() => {
+            charSpan.classList.add('show');
+          }, cIdx * 50 + wIdx * 200);
+        });
+
+        title.appendChild(wordSpan);
+        title.appendChild(document.createTextNode(' '));
+
+        // Ajustar tamaño si la palabra no cabe
+        const parentWidth = title.clientWidth;
+        const totalWidth = wordSpan.scrollWidth;
+        if (totalWidth > parentWidth) {
+          const scale = parentWidth / totalWidth;
+          wordSpan.style.display = 'inline-block';
+          wordSpan.style.transform = `scale(${scale})`;
+          wordSpan.style.transformOrigin = 'left center';
+        } else {
+          wordSpan.style.transform = 'scale(1)';
+        }
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', animateTitles);
+
+  const carousel = document.querySelector('#heroCarousel');
+  if(carousel){
+    carousel.addEventListener('slid.bs.carousel', animateTitles);
+  }
+
+  // Reajustar tamaño al cambiar el tamaño de la ventana
+  window.addEventListener('resize', animateTitles);
+</script>
+
+</body>
+</html>
