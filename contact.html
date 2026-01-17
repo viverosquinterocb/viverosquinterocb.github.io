@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
     <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="icon" type="image/png" href="images/logo/icon.png">
 
   <title>Olivos del Valle - Contacto</title>
 
@@ -76,10 +76,42 @@
     .contact-section h2 { color: #3c763d; font-weight: 600; margin-bottom: 30px; }
     .contact-info i { color: #7a9e3f; margin-right: 10px; }
 
+    /* Encabezado limpio - Contacto */
+.contact-intro {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 60px 20px 50px;
+}
+
+.contact-intro h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2e2e2e;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.contact-intro p {
+  font-size: 1.05rem;
+  color: #6c757d;
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .contact-intro h1 {
+    font-size: 1.6rem;
+  }
+}
+
+
     /* Footer */
     footer { background: #2e2e2e; color: #ccc; padding: 60px 0; }
     footer a { color: #f8f9fa; text-decoration: none; transition: 0.3s; }
     footer a:hover { text-decoration: underline; color: #7a9e3f; }
+
+
   </style>
 </head>
 <body>
@@ -106,7 +138,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light navbar-custom sticky-top" data-aos="fade-down">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><img src="images/logotipo.png" alt="Logo Olivos del Valle"></a>
+      <a class="navbar-brand" href="index.html"><img src="images/logo/logotipo.png" alt="Logo Olivos del Valle"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -130,101 +162,126 @@
   </nav>
 
 
-  <!-- Encabezado -->
-<section class="gallery-header text-center text-light py-5" style="
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-              url('images/banner-03.jpg') center/cover no-repeat;
-">
+<!-- Encabezado de contacto -->
+<section class="contact-intro">
   <div class="container" data-aos="fade-up">
-    <h1 class="display-5 fw-bold mb-3">Contáctanos</h1>
-    <p class="lead mb-0">
-      Estamos aquí para ayudarte. Ven a visitarnos o comunícate con nosotros por cualquier duda.
+
+    <h1 class="mb-3">Contacto</h1>
+
+    <p class="mb-0">
+      En <strong>Viveros Quintero C.B.</strong> estaremos encantados de atenderle y resolver
+      cualquier consulta relacionada con la producción, cultivo y comercialización de olivos.
+      Puede visitarnos en nuestras instalaciones o ponerse en contacto con nosotros a través
+      de los siguientes medios.
     </p>
+
   </div>
 </section>
 
-  <!-- Viveros -->
+<!-- Ubicación -->
 <section class="py-5 bg-light">
   <div class="container" data-aos="fade-up">
-    <h2 class="text-center contact-section mb-5">Nuestras Ubicaciones</h2>
-    <div class="row g-4">
-      <div class="col-md-6">
-        <h5 class="text-success mb-3"><i class="fas fa-map-marker-alt"></i> Vivero Principal — Torredelcampo (Jaén)</h5>
-        <div class="ratio ratio-16x9 rounded shadow">
-         <iframe src="https://www.google.com/maps/embed?pb=!3m2!1ses!2ses!4v1761149317745!5m2!1ses!2ses!6m8!1m7!1sgKWIG4ovsMNq3sE3FH1ykA!2m2!1d37.68787228821857!2d-4.501447229886122!3f17.98861086310915!4f-2.20000347256655!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            allowfullscreen="" loading="lazy"></iframe>
-        </div> 
-      </div>
-      <div class="col-md-6">
-        <h5 class="text-success mb-3"><i class="fas fa-map-marker-alt"></i> Segundo Vivero — Martos (Jaén)</h5>
-        <div class="ratio ratio-16x9 rounded shadow">
-          <iframe src="https://www.google.com/maps/embed?pb=TU_ENLACE_DE_GOOGLE_MAPS_2"
-            allowfullscreen="" loading="lazy"></iframe>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <h5 class="text-success text-center mb-3">
+          <i class="fas fa-map-marker-alt me-2"></i>
+          Carretera Badajoz, C. Granada, 312,8, Castro del Río
+        </h5>
+
+        <div class="ratio ratio-16x9 rounded shadow-sm">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12629.324450355929!2d-4.518964290618934!3d37.68842217584088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6d0f0ac8237bfd%3A0x202d7a60853ca36f!2sViveros%20Quintero%20C.B.!5e0!3m2!1ses!2ses!4v1768663728726!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+
       </div>
     </div>
+
   </div>
 </section>
 
+<!-- Información de contacto -->
+<section class="contact-section py-5">
+  <div class="container" data-aos="fade-up">
 
-  <!-- Información de contacto -->
-  <section class="contact-section py-5">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-md-4 mb-4" data-aos="fade-up">
-          <i class="fas fa-phone fa-2x"></i>
-          <h5>Teléfono</h5>
-          <p><a href="tel:+34666213683">+34 666 213 683</a></p>
-        </div>
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <i class="fas fa-envelope fa-2x"></i>
-          <h5>Email</h5>
-          <p><a href="mailto:quinteroantoniocb@gmail.com">quinteroantoniocb@gmail.com</a></p>
-        </div>
+    <div class="row justify-content-center text-center">
+
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-phone fa-2x text-success mb-3"></i>
+        <h5 class="fw-semibold">Teléfono</h5>
+        <p class="mb-0">
+          <a href="tel:+34666213683">+34 666 213 683</a>
+        </p>
       </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-envelope fa-2x text-success mb-3"></i>
+        <h5 class="fw-semibold">Correo electrónico</h5>
+        <p class="mb-0">
+          <a href="mailto:quinteroantoniocb@gmail.com">
+            quinteroantoniocb@gmail.com
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 <footer class="bg-dark text-light pt-5 pb-3">
-  <div class="container">
-    <div class="row justify-content-center text-center text-md-start">
+  <div class="container text-center">
+    <div class="row justify-content-center">
       
       <!-- Horario -->
       <div class="col-12 col-md-4 mb-4" data-aos="fade-up">
-        <h5 class="fw-semibold text-uppercase mb-3">Horario</h5>
-        <p class="mb-0">Lunes - Viernes: 08:00 - 17:00</p>
-        <p class="mb-0">Sábado: 10:00 - 14:00</p>
-        <p class="mb-0">Domingo: Cerrado</p>
+        <h5 class="fw-semibold text-uppercase mb-3">Horario de Atención</h5>
+        <ul class="list-unstyled small">
+          <li class="py-1">
+            <strong>Lunes a Viernes: </strong>
+            08:30 – 14:00 / 16:00 – 18:00
+
+          </li>
+          <li class="py-1">
+            <strong>Sábado: </strong>
+            10:00 – 14:00
+          </li>
+          <li class="py-1">
+            <strong>Domingo: </strong>
+            Cerrado
+          </li>
+        </ul>
       </div>
 
       <!-- Enlaces -->
       <div class="col-12 col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-        <h5 class="fw-semibold text-uppercase mb-3">Enlaces</h5>
-        <ul class="list-unstyled">
+        <h5 class="fw-semibold text-uppercase mb-3">Información</h5>
+        <ul class="list-unstyled small">
           <li><a href="about.html" class="text-light text-decoration-none d-block py-1">Sobre Nosotros</a></li>
           <li><a href="gallery.html" class="text-light text-decoration-none d-block py-1">Galería</a></li>
           <li><a href="contact.html" class="text-light text-decoration-none d-block py-1">Contacto</a></li>
         </ul>
       </div>
 
-      <!-- Contáctanos -->
+      <!-- Contacto -->
       <div class="col-12 col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <h5 class="fw-semibold text-uppercase mb-3">Contáctanos</h5>
-        
-        <p class="mb-2">
+        <h5 class="fw-semibold text-uppercase mb-3">Contacto</h5>
+
+        <p class="mb-2 small">
           <i class="fas fa-map-marker-alt text-success me-2"></i>
           <a href="ubicaciones.html" class="text-light text-decoration-none">
-            Ubicaciones
+            Viveros Quintero C.B.
           </a>
         </p>
 
-        <p class="mb-2">
+        <p class="mb-2 small">
           <i class="fas fa-phone text-success me-2"></i>
-          <a href="tel:+34666213683" class="text-light text-decoration-none">+34 666 213 683</a>
+          <a href="tel:+34666213683" class="text-light text-decoration-none">
+            +34 666 213 683
+          </a>
         </p>
 
-        <p class="mb-0">
+        <p class="mb-0 small">
           <i class="fas fa-envelope text-success me-2"></i>
           <a href="mailto:quinteroantoniocb@gmail.com" class="text-light text-decoration-none">
             quinteroantoniocb@gmail.com
@@ -234,8 +291,9 @@
     </div>
 
     <!-- Línea inferior -->
-    <div class="text-center mt-4 border-top border-secondary pt-3" data-aos="fade-up" data-aos-delay="300">
-      © 2025 <strong>Viveros Quintero C.B.</strong> — Todos los derechos reservados
+    <div class="mt-4 border-top border-secondary pt-3 small" data-aos="fade-up" data-aos-delay="300">
+      © 2025 <strong>Viveros Quintero C.B.</strong><br>
+      Especialistas en cultivo y producción de olivos
     </div>
   </div>
 </footer>

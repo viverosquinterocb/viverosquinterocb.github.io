@@ -169,6 +169,33 @@
     @media (max-width: 768px) {
       .gallery-header h1 { font-size: 2rem; }
     }
+    /* Encabezado limpio de galería (SEO / Premium) */
+.gallery-intro {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 60px 20px 50px;
+}
+
+.gallery-intro h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2e2e2e;
+  margin-bottom: 12px;
+}
+
+.gallery-intro p {
+  font-size: 1.05rem;
+  color: #6c757d;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .gallery-intro h1 {
+    font-size: 1.6rem;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -195,7 +222,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light navbar-custom sticky-top" data-aos="fade-down">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><img src="images/logotipo.png" alt="Logo Olivos del Valle"></a>
+      <a class="navbar-brand" href="index.html"><img src="images/logo/logotipo.png" alt="Logo Olivos del Valle"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -219,17 +246,25 @@
   </nav>
 
 <!-- Encabezado de la galería -->
-<section class="gallery-header text-center text-light py-5" style="
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-              url('images/banner-03.jpg') center/cover no-repeat;
-">
-  <div class="container" data-aos="fade-up">
-    <h1 class="display-5 fw-bold mb-3">Galería de Nuestros Olivos</h1>
-    <p class="lead mb-0">
-      Un recorrido visual por la dedicación, el esfuerzo y la pasión que ponemos en cada planta.
+<!-- Encabezado de la galería -->
+<section class="gallery-intro">
+  <div class="container text-center" data-aos="fade-up">
+
+    <h1>
+      Galería de Olivos de Producción Profesional
+    </h1>
+
+    <p>
+      Vivero especializado en la producción y cultivo de olivos certificados.
+      Descubra nuestras instalaciones, variedades y procesos agrícolas.
     </p>
+
   </div>
 </section>
+
+
+
+
 
 
   <!-- Galería -->
@@ -245,27 +280,8 @@
       </div>
     </div>
 
-    <div class="row special-list">
-      <div class="col-lg-3 col-md-4 col-sm-6 mb-4 special-grid picual" data-aos="zoom-in">
-        <div class="products-single">
-          <img src="images/macetas-001.jpg" alt="Olivo Picual" onclick="openLightbox(this)">
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 mb-4 special-grid arbequina" data-aos="zoom-in" data-aos-delay="100">
-        <div class="products-single">
-          <img src="images/macetas-002.jpg" alt="Olivo Arbequina" onclick="openLightbox(this)">
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 mb-4 special-grid hojiblanca" data-aos="zoom-in" data-aos-delay="200">
-        <div class="products-single">
-          <img src="images/macetas-003.jpg" alt="Olivo Hojiblanca" onclick="openLightbox(this)">
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 mb-4 special-grid picual" data-aos="zoom-in" data-aos-delay="300">
-        <div class="products-single">
-          <img src="images/macetas-005.jpg" alt="Olivo Picual" onclick="openLightbox(this)">
-        </div>
-      </div>
+    <div class="row special-list" id="gallery-row">
+      <!-- Aquí se cargará la galería dinámicamente -->
     </div>
   </div>
 </section>
@@ -308,46 +324,60 @@
   </div>
 </div>
 
- <!-- Footer -->
+<!-- Footer -->
 <footer class="bg-dark text-light pt-5 pb-3">
-  <div class="container">
-    <div class="row justify-content-center text-center text-md-start">
+  <div class="container text-center">
+    <div class="row justify-content-center">
       
       <!-- Horario -->
       <div class="col-12 col-md-4 mb-4" data-aos="fade-up">
-        <h5 class="fw-semibold text-uppercase mb-3">Horario</h5>
-        <p class="mb-0">Lunes - Viernes: 08:00 - 17:00</p>
-        <p class="mb-0">Sábado: 10:00 - 14:00</p>
-        <p class="mb-0">Domingo: Cerrado</p>
+        <h5 class="fw-semibold text-uppercase mb-3">Horario de Atención</h5>
+        <ul class="list-unstyled small">
+          <li class="py-1">
+            <strong>Lunes a Viernes: </strong>
+            08:30 – 14:00 / 16:00 – 18:00
+
+          </li>
+          <li class="py-1">
+            <strong>Sábado: </strong>
+            10:00 – 14:00
+          </li>
+          <li class="py-1">
+            <strong>Domingo: </strong>
+            Cerrado
+          </li>
+        </ul>
       </div>
 
       <!-- Enlaces -->
       <div class="col-12 col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-        <h5 class="fw-semibold text-uppercase mb-3">Enlaces</h5>
-        <ul class="list-unstyled">
+        <h5 class="fw-semibold text-uppercase mb-3">Información</h5>
+        <ul class="list-unstyled small">
           <li><a href="about.html" class="text-light text-decoration-none d-block py-1">Sobre Nosotros</a></li>
           <li><a href="gallery.html" class="text-light text-decoration-none d-block py-1">Galería</a></li>
           <li><a href="contact.html" class="text-light text-decoration-none d-block py-1">Contacto</a></li>
         </ul>
       </div>
 
-      <!-- Contáctanos -->
+      <!-- Contacto -->
       <div class="col-12 col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <h5 class="fw-semibold text-uppercase mb-3">Contáctanos</h5>
-        
-        <p class="mb-2">
+        <h5 class="fw-semibold text-uppercase mb-3">Contacto</h5>
+
+        <p class="mb-2 small">
           <i class="fas fa-map-marker-alt text-success me-2"></i>
           <a href="ubicaciones.html" class="text-light text-decoration-none">
-            Ubicaciones
+            Viveros Quintero C.B.
           </a>
         </p>
 
-        <p class="mb-2">
+        <p class="mb-2 small">
           <i class="fas fa-phone text-success me-2"></i>
-          <a href="tel:+34666213683" class="text-light text-decoration-none">+34 666 213 683</a>
+          <a href="tel:+34666213683" class="text-light text-decoration-none">
+            +34 666 213 683
+          </a>
         </p>
 
-        <p class="mb-0">
+        <p class="mb-0 small">
           <i class="fas fa-envelope text-success me-2"></i>
           <a href="mailto:quinteroantoniocb@gmail.com" class="text-light text-decoration-none">
             quinteroantoniocb@gmail.com
@@ -357,8 +387,9 @@
     </div>
 
     <!-- Línea inferior -->
-    <div class="text-center mt-4 border-top border-secondary pt-3" data-aos="fade-up" data-aos-delay="300">
-      © 2025 <strong>Viveros Quintero C.B.</strong> — Todos los derechos reservados
+    <div class="mt-4 border-top border-secondary pt-3 small" data-aos="fade-up" data-aos-delay="300">
+      © 2025 <strong>Viveros Quintero C.B.</strong><br>
+      Especialistas en cultivo y producción de olivos
     </div>
   </div>
 </footer>
@@ -384,6 +415,36 @@ window.addEventListener('load', () => {
     iso.arrange({ filter: e.target.dataset.filter });
   });
 });
+
+const imagess = [
+    { src: "images/macetas-001.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/arbequina/arbequina-002.png", alt: "Olivo Arbequina", category: "arbequina", delay: 100 },
+    { src: "images/arbequina/arbequina-003.png", alt: "Olivo Arbequina", category: "arbequina", delay: 200 },
+    { src: "images/arbequina/arbequina-004.png", alt: "Olivo Arbequina", category: "arbequina", delay: 300 },
+    { src: "images/arbequina/arbequina-005.jpg", alt: "Olivo Arbequina", category: "arbequina", delay: 400 },
+    { src: "images/arbequina/arbequina-006.jpg", alt: "Olivo Arbequina", category: "arbequina", delay: 500 },
+    { src: "images/arbequina/arbequina-007.jpg", alt: "Olivo Arbequina", category: "arbequina", delay: 600 },
+    { src: "images/macetas-002.jpg", alt: "Olivo Arbequina", category: "arbequina", delay: 700 },
+    { src: "images/macetas-003.jpg", alt: "Olivo Hojiblanca", category: "hojiblanca", delay: 200 },
+    { src: "images/macetas-005.jpg", alt: "Olivo Picual", category: "picual", delay: 300 },
+  ];
+
+  const galleryRow = document.getElementById('gallery-row');
+
+  imagess.forEach(img => {
+    const col = document.createElement('div');
+    col.className = `col-lg-3 col-md-4 col-sm-6 mb-4 special-grid ${img.category}`;
+    col.setAttribute('data-aos', 'zoom-in');
+    col.setAttribute('data-aos-delay', img.delay);
+
+    col.innerHTML = `
+      <div class="products-single">
+        <img src="${img.src}" alt="${img.alt}" onclick="openLightbox(this)">
+      </div>
+    `;
+
+    galleryRow.appendChild(col);
+  });
 
 // -------------------------------
 // LIGHTBOX
