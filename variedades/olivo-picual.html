@@ -2,10 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Olivo Picual al por mayor desde Córdoba. En Viveros Quintero C.B. producimos plantones de olivo certificados para agricultores, viveros y grandes plantaciones en España y Portugal. Alta productividad y calidad garantizada.">      <!-- Favicon -->
-  <link rel="icon" type="image/png" href="../images/icon.png">
-  <title>Olivo Picual – Plantones de Olivo al por Mayor | Viveros Quintero CB Córdoba</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+      <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/logo/icon.png">
+  <title>Viveros Quintero CB | Arbequina | Variedad para cultivo intensivo</title>
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -26,6 +27,12 @@
     .navbar-custom .nav-link { color: #333; font-weight: 500; transition: 0.3s; }
     .navbar-custom .nav-link:hover, .navbar-custom .nav-link.active { color: #7a9e3f; }
     .navbar-custom .navbar-brand img { height: 60px; }
+
+
+.dropdown-menu-custom .dropdown-item.active {
+  background-color: #7a9e3f !important;
+  color: #fff !important;
+}
 
     /* Dropdown moderno */
     .dropdown-menu-custom {
@@ -68,24 +75,10 @@
     .variedad-gallery img:hover { transform: scale(1.05); }
 
     /* Footer */
-    /* Footer */
     footer { background: #2e2e2e; color: #ccc; padding: 60px 0; }
     footer a { color: #f8f9fa; text-decoration: none; transition: 0.3s; }
     footer a:hover { text-decoration: underline; color: #7a9e3f; }
   </style>
-
-  <script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Product",
- "name": "Olivo Picual",
- "description": "Plantones de olivo Picual producidos por Viveros Quintero en Córdoba para plantaciones agrícolas.",
- "brand": {
-   "@type": "Brand",
-   "name": "Viveros Quintero C.B."
- }
-}
-</script>
 </head>
 <body>
 
@@ -97,7 +90,7 @@
 
         </div>
         <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end flex-wrap" data-aos="fade-left">
-          <a href="tel:+34666213683" class="text-light me-3 mb-1 mb-md-0">
+          <a href="tel:+34000" class="text-light me-3 mb-1 mb-md-0">
             <i class="fas fa-phone-alt"></i> +34 666 213 683
           </a>
           <a href="mailto:info@olivosdelvalle.com" class="text-light mb-1 mb-md-0">
@@ -107,13 +100,12 @@
       </div>
     </div>
   </div>
-
+  
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light navbar-custom sticky-top">
     <div class="container">
-<a class="navbar-brand" href="../index.html">
-<img src="../images/logo/logotipo.png" alt="Logo Viveros Quintero C.B. vivero de olivos en Córdoba">
-</a>      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <a class="navbar-brand" href="../index.html"><img src="../images/logo/logotipo.png" alt="Logo Olivos del Valle"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -123,12 +115,14 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Variedades</a>
             <ul class="dropdown-menu dropdown-menu-custom">
-              <li><a class="dropdown-item" href="olivo-picual-al-por-mayor.html">Picual</a></li>
-              <li><a class="dropdown-item" href="olivo-arbequina-proveedor.html">Arbequina</a></li>
-              <li><a class="dropdown-item" href="olivo-hojiblanca-vivero.html">Hojiblanca</a></li>
+              <li><a class="dropdown-item active" href="olivo-picual.html">Picual</a></li>
+              <li><a class="dropdown-item" href="olivo-arbequina.html">Arbequina</a></li>
+              <li><a class="dropdown-item" href="olivo-hojiblanca.html">Hojiblanca</a></li>
+              <li><a class="dropdown-item" href="olivo-arbosana.html">Arbosana</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="../gallery.html">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="../precios.html">Precios</a></li>
           <li class="nav-item"><a class="nav-link" href="../contact.html">Contacto</a></li>
         </ul>
       </div>
@@ -161,14 +155,6 @@
     background-attachment: fixed;
   }
 
-  .variedad-header {
-    min-height: 40vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-attachment: fixed;
-  }
-
   @media (max-width: 768px) {
     .variedad-header { min-height: 30vh; background-attachment: scroll; }
     .variedad-header h1 { font-size: 1.9rem; }
@@ -179,6 +165,8 @@
   .variedad-section ul { list-style-type: disc; margin-left: 20px; }
   .variedad-gallery img { border-radius: 8px; }
 </style>
+
+
 
 <section class="variedad-section">
 <div class="container">
@@ -238,19 +226,17 @@ Nuestros olivos Picual son plantas sanas y resistentes, con excelente adaptació
 
 
 
-<div class="text-center mt-4">
-<a href="../contact.html" class="btn btn-success btn-lg me-2">
-<i class="fas fa-envelope"></i> Solicitar Información
-</a>
 
-<a href="https://wa.me/34666213683" class="btn btn-outline-success btn-lg">
-<i class="fab fa-whatsapp"></i> WhatsApp
-</a>
-</div>
 
-</br>
 
-<!-- Galería -->
+
+
+
+
+
+
+
+<!-- Galería 
 <section class="variedad-section">
   <div class="container text-center" data-aos="fade-up">
     <h2>Galería de Olivo Picual</h2>
@@ -269,8 +255,7 @@ Nuestros olivos Picual son plantas sanas y resistentes, con excelente adaptació
   </div>
 </section>
 
-
-
+-->
 
 <!-- Footer -->
 <footer class="bg-dark text-light pt-5 pb-3">
@@ -336,11 +321,12 @@ Nuestros olivos Picual son plantas sanas y resistentes, con excelente adaptació
 
     <!-- Línea inferior -->
     <div class="mt-4 border-top border-secondary pt-3 small" data-aos="fade-up" data-aos-delay="300">
-      © 2026 <strong>Viveros Quintero C.B.</strong><br>
+      © 2025 <strong>Viveros Quintero C.B.</strong><br>
       Especialistas en cultivo y producción de olivos
     </div>
   </div>
 </footer>
+
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>

@@ -48,6 +48,14 @@
      -o-transition: all .3s ease-in-out;
      transition: all .3s ease-in-out;
 }
+
+    .navbar-custom .nav-link.active {
+  background-color: #7a9e3f !important;
+  color: #fff !important;
+  border-radius: 20px;
+  padding: 6px 14px;
+}
+
  h1, h2, h3, h4, h5, h6 {
      letter-spacing: 0;
      font-weight: normal;

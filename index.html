@@ -6,7 +6,11 @@
   <!-- Favicon -->
 <link rel="icon" type="image/png" href="images/logo/icon.png">
 
-  <title>Viveros Quintero C.B. – Proveedor de Olivos al por Mayor | Córdoba</title>
+<title>Viveros Quintero CB | Inicio | Producción y venta de planta de olivo</title>
+<link rel="preload" href="images/home/banner-02.jpg" as="image">
+<link rel="preload" href="images/home/banner-03.jpg" as="image">
+<link rel="preload" href="images/home/palets.jpeg" as="image">
+<link rel="preload" href="images/home/banner-04.jpg" as="image">
 
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,6 +26,8 @@
   padding: 0.25rem 0; /* reduce el alto del navbar */
   transition: 0.3s;
 }
+
+.navbar-custom .nav-link:hover, .navbar-custom .nav-link.active { color: #7a9e3f; }
 
 .navbar-custom .navbar-brand {
   padding: 0; /* quita el padding extra */
@@ -123,8 +129,79 @@
       padding: 12px;
       font-size: 0.9rem;
     }
+
+  /* ====== VARIEDADES PREMIUM CARDS ====== */
+
+.variedad-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  transition: all 0.4s ease;
+  background: #fff;
+}
+
+.variedad-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Imagen zoom */
+.variedad-card img {
+  transition: transform 0.6s ease;
+}
+
+.variedad-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Overlay limpio (sin texto) */
+.variedad-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.variedad-card:hover .variedad-overlay {
+  opacity: 1;
+}
+
+/* Botón */
+.variedad-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: #2e7d32;
+  color: #fff;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.variedad-btn:hover {
+  background: #1b5e20;
+  transform: scale(1.05);
+  color: #fff;
+}
+
+/* Texto inferior (normal) */
+.variedad-title {
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.variedad-text {
+  font-size: 14px;
+  color: #555;
+}
   </style>
 </head>
+
+
+
+
+
 <body>
 
   <!-- Barra superior -->
@@ -160,12 +237,14 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Variedades</a>
             <ul class="dropdown-menu dropdown-menu-custom">
-              <li><a class="dropdown-item" href="variedades/olivo-picual-al-por-mayor.html">Picual</a></li>
-              <li><a class="dropdown-item" href="variedades/olivo-arbequina-proveedor.html">Arbequina</a></li>
-              <li><a class="dropdown-item" href="variedades/olivo-hojiblanca-vivero.html">Hojiblanca</a></li>
+              <li><a class="dropdown-item" href="variedades/olivo-picual.html">Picual</a></li>
+              <li><a class="dropdown-item" href="variedades/olivo-arbequina.html">Arbequina</a></li>
+              <li><a class="dropdown-item" href="variedades/olivo-hojiblanca.html">Hojiblanca</a></li>
+              <li><a class="dropdown-item" href="variedades/olivo-arbosana.html">Arbosana</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
         </ul>
       </div>
@@ -184,25 +263,26 @@
   <div class="carousel-inner">
 
    <!-- Slide 1 -->
-<div class="carousel-item active" style="background-image: url('images/banner/banner-01.jpeg');" role="img" aria-label="Olivos cultivados en vivero en Córdoba">
+<div class="carousel-item active" style="background-image: url('images/home/banner-01.jpg');" role="img" aria-label="Olivos cultivados en vivero en Córdoba">
   <div class="carousel-caption text-center">
-    <h1 data-aos="fade-up">Viveros de Olivos en Córdoba  - Producción y Venta al por Mayor</h1>
+    <h1 data-aos="fade-up">Viveros Quintero CB</h1>
     <p data-aos="fade-up" data-aos-delay="500">Gran producción de olivos con cientos de miles de plantas disponibles. Suministramos tanto a profesionales como a particulares.</p>
     <a href="contact.html" class="btn btn-custom" data-aos="zoom-in" data-aos-delay="700">Solicitar Información</a>
   </div>
 </div>
 
 <!-- Slide 2 -->
-<div class="carousel-item" style="background-image: url('images/banner/banner-02.jpg');" role="img" aria-label="Más de 30 años cultivando olivos de calidad">
+<div class="carousel-item" style="background-image: url('images/home/banner-02.jpg');" role="img" aria-label="Más de 30 años cultivando olivos de calidad">
   <div class="carousel-caption text-center">
     <h1 data-aos="fade-up">Más de 30 Años de Experiencia</h1>
-    <p data-aos="fade-up" data-aos-delay="500">En Viveros Quintero CB combinamos tradición y técnicas modernas para producir grandes cantidades de olivos con la máxima calidad.</p>
+    <p data-aos="fade-up" data-aos-delay="500">En Viveros Quintero CB unimos la experiencia y la tradición agrícola con técnicas de cultivo modernas para ofrecer olivos de alta calidad, adaptados a las necesidades de cada cliente y con una excelente relación calidad-precio.
+</p>
     <a href="about.html" class="btn btn-custom" data-aos="zoom-in" data-aos-delay="700">Conócenos</a>
   </div>
 </div>
 
 <!-- Slide 3 -->
-<div class="carousel-item" style="background-image: url('images/logistica/palets.jpeg');" role="img" aria-label="Preparación y transporte de olivos">
+<div class="carousel-item" style="background-image: url('images/home/palets.jpeg');" role="img" aria-label="Preparación y transporte de olivos">
   <div class="carousel-caption text-center">
     <h1 data-aos="fade-up">Producción y Logística Preparada</h1>
 <p data-aos="fade-up" data-aos-delay="500">
@@ -212,7 +292,7 @@ Preparación en pallet y gestión de transporte para pedidos de gran volumen, ga
 </div>
 
 <!-- Slide 4 -->
-<div class="carousel-item" style="background-image: url('images/banner/banner-04.jpg');" role="img" aria-label="Productor de olivos en Córdoba">
+<div class="carousel-item" style="background-image: url('images/home/banner-04.jpg');" role="img" aria-label="Productor de olivos en Córdoba">
   <div class="carousel-caption text-center">
     <h1 data-aos="fade-up">Productores Directos</h1>
     <p data-aos="fade-up" data-aos-delay="500">Olivos cultivados directamente en nuestro vivero sin intermediarios con gran capacidad de producción y venta.</p>
@@ -230,68 +310,127 @@ Preparación en pallet y gestión de transporte para pedidos de gran volumen, ga
   </button>
 </div>
 
- <!-- Variedades de Olivos al por Mayor -->
-<section class="latest-blog">
+<!-- Variedades de Olivos -->
+<section class="latest-blog py-5">
   <div class="container">
+
+    <!-- Título -->
     <div class="text-center mb-5" data-aos="fade-up">
-      <h2>Variedades de Olivos</h2>
-      <p>Selecciona la variedad más adecuada para tu plantación.</p>
+      <h2 class="fw-bold">Variedades de Olivos</h2>
+
+      <p class="text-muted mx-auto" style="max-width: 750px;">
+        En Viveros Quintero CB disponemos de diferentes variedades de olivos adaptadas 
+        a distintos tipos de cultivo y producción. Trabajamos con olivos de alta calidad 
+        para plantaciones intensivas, superintensivas, fincas agrícolas y particulares.
+      </p>
     </div>
 
-    <div class="row">
+   <!-- GRID -->
+<div class="row justify-content-center">
 
-      <!-- Picual -->
-      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-        <a href="variedades/picual.html" class="text-decoration-none text-dark">
-          <div class="card shadow-sm h-100">
-            <img src="images/banner/picual.png" class="card-img-top" alt="Olivo Picual al por mayor para viveros ,paisajistas y particulares">
-            <div class="card-body text-center">
-              <h5 class="card-title">Picual</h5>
-              <p class="card-text">
-Muy productiva y resistente. Destaca por su alto rendimiento en aceite y su gran adaptación a diferentes condiciones de cultivo.            </p>
-            </div>
+  <!-- PICUAL -->
+  <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+    <a href="variedades/olivo-picual.html" class="text-decoration-none">
+      <div class="variedad-card shadow-sm h-100">
+
+        <img src="images/home/picual-variedad.jpg"
+             class="w-100"
+             style="height: 240px; object-fit: cover;"
+             alt="Olivo Picual">
+
+        <div class="p-3 text-center">
+          <div class="variedad-title">Picual</div>
+          <div class="variedad-text">
+            Muy productiva y resistente. Alto rendimiento en aceite.
           </div>
-        </a>
-      </div>
+        </div>
 
-      <!-- Arbequina -->
-      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <a href="variedades/arbequina.html" class="text-decoration-none text-dark">
-          <div class="card shadow-sm h-100">
-            <img src="images/banner/arbequina.png" class="card-img-top" alt="Olivo Arbequina al por mayor proveedor profesional">
-            <div class="card-body text-center">
-              <h5 class="card-title">Arbequina</h5>
-              <p class="card-text">
-Variedad de olivo Arbequina de porte reducido y entrada temprana en producción. Muy valorada por su alta productividad y excelente adaptación a plantaciones intensivas y superintensivas.              </p>
-            </div>
-          </div>
-        </a>
-      </div>
+<div class="variedad-overlay"></div>
 
-      <!-- Hojiblanca -->
-      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-        <a href="variedades/hojiblanca.html" class="text-decoration-none text-dark">
-          <div class="card shadow-sm h-100">
-            <img src="images/banner/hojiblanca.png" class="card-img-top" alt="Olivo Hojiblanca al por mayor para viveros">
-            <div class="card-body text-center">
-              <h5 class="card-title">Hojiblanca</h5>
-              <p class="card-text">
-Variedad de olivo Hojiblanca, vigorosa y muy adaptada a zonas calizas. Destaca por su buena productividad y por producir aceitunas aptas tanto para aceite como para mesa.              </p>
-            </div>
-          </div>
-        </a>
       </div>
-
-    </div>
+    </a>
   </div>
+
+  <!-- ARBEQUINA -->
+  <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+    <a href="variedades/olivo-arbequina.html" class="text-decoration-none">
+      <div class="variedad-card shadow-sm h-100">
+
+        <img src="images/home/arbequina-variedad.jpg"
+             class="w-100"
+             style="height: 200px; object-fit: cover;"
+             alt="Olivo Arbequina">
+
+        <div class="p-3 text-center">
+          <div class="variedad-title">Arbequina</div>
+          <div class="variedad-text">
+            Porte reducido y producción temprana.
+          </div>
+        </div>
+
+<div class="variedad-overlay"></div>
+
+      </div>
+    </a>
+  </div>
+
+  <!-- HOJIBLANCA -->
+  <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+    <a href="variedades/olivo-hojiblanca.html" class="text-decoration-none">
+      <div class="variedad-card shadow-sm h-100">
+
+        <img src="images/home/hojiblanca-variedad.jpg"
+             class="w-100"
+             style="height: 200px; object-fit: cover;"
+             alt="Olivo Hojiblanca">
+
+        <div class="p-3 text-center">
+          <div class="variedad-title">Hojiblanca</div>
+          <div class="variedad-text">
+            Adaptación excelente y doble uso.
+          </div>
+        </div>
+<div class="variedad-overlay"></div>
+
+      </div>
+    </a>
+  </div>
+
+  <!-- ARBOSANA -->
+  <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+    <a href="variedades/olivo-arbosana.html" class="text-decoration-none">
+      <div class="variedad-card shadow-sm h-100">
+
+        <img src="images/home/arbosana-variedad.jpg"
+             class="w-100"
+             style="height: 240px; object-fit: cover;"
+             alt="Olivo Arbosana">
+
+        <div class="p-3 text-center">
+          <div class="variedad-title">Arbosana</div>
+          <div class="variedad-text">
+            Compacta y muy productiva.
+          </div>
+        </div>
+
+<div class="variedad-overlay"></div>
+
+      </div>
+    </a>
+  </div>
+
+</div>
+
+</div>
 </section>
+
 
 <!-- Por qué elegirnos-->
 <section class="about-box-main bg-light">
   <div class="container">
     <div class="text-center mb-5" data-aos="fade-up">
       <h2>Por qué confiar en Viveros Quintero C.B.</h2>
-<p>Especialistas en la producción y venta de olivos al por mayor, con suministro directo sin intermediarios.</p>
+<p>Especialistas en la producción y venta de olivos, con suministro directo sin intermediarios.</p>
     </div>
     <div class="row text-center">
       
