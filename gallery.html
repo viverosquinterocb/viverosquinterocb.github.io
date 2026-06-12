@@ -10,7 +10,6 @@
 
 
 
-
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -203,24 +202,40 @@
 </head>
 <body>
 
-  <!-- Barra superior -->
-  <div class="main-top bg-success text-light py-2">
-    <div class="container">
-      <div class="row align-items-center text-center text-md-start">
-        <div class="col-12 col-md-6 mb-2 mb-md-0" data-aos="fade-right">
+ <!-- Barra superior -->
+<div class="main-top bg-success text-light py-2">
+  <div class="container">
+    <div class="row align-items-center text-center text-md-start">
 
-        </div>
-        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end flex-wrap" data-aos="fade-left">
-          <a href="tel:+34000" class="text-light me-3 mb-1 mb-md-0">
-            <i class="fas fa-phone-alt"></i> +34 666 213 683
-          </a>
-          <a href="mailto:info@olivosdelvalle.com" class="text-light mb-1 mb-md-0">
-            <i class="fas fa-envelope"></i> quinteroantoniocb@gmail.com
-          </a>
-        </div>
+      <div class="col-12 col-md-6 mb-2 mb-md-0" data-aos="fade-right">
+        <small class="fw-light">
+          🌿 Producción y venta directa de olivos
+        </small>
       </div>
+
+      <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end flex-wrap"
+           data-aos="fade-left">
+
+        <!-- TELÉFONO -->
+        <a href="tel:+34666213683"
+           class="text-light me-3 mb-1 mb-md-0 text-decoration-none">
+          <i class="fas fa-phone-alt"></i>
+          +34 666 213 683
+        </a>
+
+        <!-- WHATSAPP -->
+        <a href="https://wa.me/34666213683"
+           target="_blank"
+           class="text-light text-decoration-none">
+          <i class="fab fa-whatsapp"></i>
+          WhatsApp
+        </a>
+
+      </div>
+
     </div>
   </div>
+</div>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light navbar-custom sticky-top" data-aos="fade-down">
@@ -391,65 +406,101 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 
 <script>
 AOS.init({ duration: 1000, once: true });
 
-// -------------------------------
-// FILTRO ISOTOPE
-// -------------------------------
-window.addEventListener('load', () => {
-  const grid = document.querySelector('.special-list');
-  const iso = new Isotope(grid, { itemSelector: '.special-grid', percentPosition: true });
-  document.querySelector('.filter-button-group').addEventListener('click', e => {
-    if (e.target.tagName !== 'BUTTON') return;
-    document.querySelectorAll('.filter-button-group button').forEach(b => b.classList.remove('active'));
-    e.target.classList.add('active');
-    iso.arrange({ filter: e.target.dataset.filter });
-  });
-});
-
 const imagess = [
 
 //Picual
-    { src: "images/macetas-001.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
-    { src: "images/picual/picual-joven005.jpg", alt: "Olivo Picual joven", category: "picual", delay: 400 },
-    { src: "images/picual/picual-joven002.jpg", alt: "Olivo Picual joven", category: "picual", delay: 400 },
-    { src: "images/picual/picual-joven004.jpg", alt: "Olivo Picual joven", category: "picual", delay: 400 },
+
+    //Macetas
+    { src: "images/picual/macetas/grande/picual-maceta-001.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/picual/macetas/grande/picual-maceta-002.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/picual/macetas/grande/picual-maceta-004.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/picual/macetas/grande/picual-maceta-005.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/picual/macetas/grande/picual-maceta-006.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/picual/macetas/grande/picual-maceta-007.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/picual/macetas/chico/picual-joven001.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/picual/macetas/chico/picual-joven002.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/picual/macetas/chico/picual-joven003.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/picual/macetas/chico/picual-joven004.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/picual/macetas/chico/picual-joven005.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/picual/macetas/chico/picual-joven006.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/picual/macetas/chico/picual-joven007.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+
+
+
+
+    //Bolsas
+
+    { src: "images/picual/bolsa/picual-001.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/picual/bolsa/picual-002.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/picual/bolsa/chico/001.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/picual/bolsa/chico/002.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/picual/bolsa/chico/003.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+
+
+
+
+
+
+
+
+
+    //Turba
+
+    { src: "images/picual/turba/chico/001.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/picual/turba/chico/003.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/picual/turba/chico/004.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+    { src: "images/picual/turba/chico/005.jpg", alt: "Olivo Picual", category: "picual", delay: 0 },
+
 
 
 
 
 //Arbequina
-    { src: "images/arbequina/arbequina-002.png", alt: "Olivo Arbequina", category: "arbequina", delay: 100 },
-    { src: "images/arbequina/arbequina-004.png", alt: "Olivo Arbequina", category: "arbequina", delay: 300 },
-    { src: "images/arbequina/arbequina-005.jpg", alt: "Olivo Arbequina", category: "arbequina", delay: 400 },
-    { src: "images/arbequina/arbequina-008.jpg", alt: "Olivo Arbequina", category: "arbequina", delay: 400 },
+    { src: "images/arbequina/turba/grande/001.png", alt: "Olivo Arbequina", category: "arbequina", delay: 0 },
+    { src: "images/arbequina/turba/grande/003.png", alt: "Olivo Arbequina", category: "arbequina", delay: 0 },
+    { src: "images/arbequina/turba/grande/004.jpg", alt: "Olivo Arbequina", category: "arbequina", delay: 0 },
+    { src: "images/arbequina/turba/grande/005.jpg", alt: "Olivo Arbequina", category: "arbequina", delay: 0 },
+
 
 
 //Hojiblanca
+    { src: "images/hojiblanca/bolsa/001.jpg", alt: "Olivo Hojiblanca", category: "hojiblanca", delay: 0 },
+    { src: "images/hojiblanca/bolsa/002.jpg", alt: "Olivo Hojiblanca", category: "hojiblanca", delay: 0 },
 
 
 
 //Arbosana
 
+    { src: "images/arbosana/turba/chico/001.jpg", alt: "Olivo Arbosana", category: "arbosana", delay: 0 },
+    { src: "images/arbosana/turba/chico/002.jpg", alt: "Olivo Arbosana", category: "arbosana", delay: 0 },
 
 
 
 //Instalaciones
    
-   //Cambiar
-   // { src: "images/macetas-005.jpg", alt: "Invernadero", category: "instalaciones", delay: 300 },
+    { src: "images/instalaciones/001.jpg", alt: "Invernadero", category: "instalaciones", delay: 0 },
 
   ];
 
+  window.addEventListener('load', () => {
+
   const galleryRow = document.getElementById('gallery-row');
 
+  // 🔥 EVITAR DUPLICADOS
+  galleryRow.innerHTML = "";
+
+  // ===============================
+  // CREAR GALERÍA
+  // ===============================
   imagess.forEach(img => {
     const col = document.createElement('div');
+
     col.className = `col-lg-3 col-md-4 col-sm-6 mb-4 special-grid ${img.category}`;
-    col.setAttribute('data-aos', 'zoom-in');
-    col.setAttribute('data-aos-delay', img.delay);
 
     col.innerHTML = `
       <div class="products-single">
@@ -460,23 +511,65 @@ const imagess = [
     galleryRow.appendChild(col);
   });
 
-// -------------------------------
+  const grid = document.querySelector('.special-list');
+
+  // 🔥 EVITAR INSTANCIAS DUPLICADAS
+  if (window.isoInstance) {
+    window.isoInstance.destroy();
+  }
+
+  window.isoInstance = new Isotope(grid, {
+    itemSelector: '.special-grid',
+    percentPosition: true,
+    layoutMode: 'fitRows'
+  });
+
+  // Recalcular cuando cargan imágenes
+  imagesLoaded(grid, () => {
+    window.isoInstance.layout();
+  });
+
+  // ===============================
+  // FILTROS
+  // ===============================
+  document.querySelector('.filter-button-group').addEventListener('click', e => {
+    if (e.target.tagName !== 'BUTTON') return;
+
+    document.querySelectorAll('.filter-button-group button')
+      .forEach(b => b.classList.remove('active'));
+
+    e.target.classList.add('active');
+
+    window.isoInstance.arrange({
+      filter: e.target.dataset.filter
+    });
+
+    window.isoInstance.layout();
+  });
+
+});
+
+
+// ===============================
 // LIGHTBOX
-// -------------------------------
-let currentIndex = 0, images = [];
+// ===============================
+let currentIndex = 0;
+let images = [];
 
 function openLightbox(img) {
-  // Solo imágenes visibles
+
   images = Array.from(document.querySelectorAll('.special-list img'))
-                 .filter(i => i.offsetParent !== null); // Filtra las que no están ocultas
+    .filter(i => i.offsetParent !== null);
+
   currentIndex = images.indexOf(img);
+
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
+
   lightboxImg.src = img.src;
   lightbox.style.display = 'flex';
-  document.body.style.overflow = 'hidden'; // Evita scroll detrás
+  document.body.style.overflow = 'hidden';
 }
-
 
 function closeLightbox() {
   document.getElementById('lightbox').style.display = 'none';
@@ -485,26 +578,28 @@ function closeLightbox() {
 
 function navigate(dir) {
   currentIndex = (currentIndex + dir + images.length) % images.length;
+
   const lightboxImg = document.getElementById('lightbox-img');
+
   lightboxImg.style.transform = 'scale(0.95)';
+
   setTimeout(() => {
     lightboxImg.src = images[currentIndex].src;
     lightboxImg.style.transform = 'scale(1)';
   }, 150);
 }
 
-// Cerrar al pulsar ESC
+// ESC + flechas
 window.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeLightbox();
   if (e.key === 'ArrowRight') navigate(1);
   if (e.key === 'ArrowLeft') navigate(-1);
 });
 
-// Cerrar al hacer clic fuera de la imagen
+// cerrar click fuera
 document.getElementById('lightbox').addEventListener('click', e => {
   if (e.target.id === 'lightbox') closeLightbox();
 });
 </script>
-
 </body>
 </html>
