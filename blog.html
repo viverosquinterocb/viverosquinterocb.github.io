@@ -7,10 +7,7 @@
 <link rel="icon" type="image/png" href="images/logo/icon.png">
 
 <title>Viveros Quintero CB | Inicio | Producción y venta de planta de olivo</title>
-<link rel="preload" href="images/home/banner-02.jpg" as="image">
-<link rel="preload" href="images/home/banner-03.jpg" as="image">
-<link rel="preload" href="images/home/palets.jpeg" as="image">
-<link rel="preload" href="images/home/banner-04.jpg" as="image">
+
 
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -105,9 +102,38 @@
       transform: translateY(0);
     }
 
-    /* Carousel indicators */
-    .carousel-indicators [data-bs-target] { background-color: #ccc; }
-    .carousel-indicators .active { background-color: #7a9e3f; }
+   .blog-hero{
+background:linear-gradient(
+rgba(0,0,0,.45),
+rgba(0,0,0,.45)
+),
+url('images/home/banner-01.jpg');
+background-size:cover;
+background-position:center;
+}
+
+.article-card{
+border-radius:16px;
+overflow:hidden;
+transition:.35s;
+background:#fff;
+}
+
+.article-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.article-card img{
+height:260px;
+width:100%;
+object-fit:cover;
+transition:.4s;
+}
+
+.article-card:hover img{
+transform:scale(1.05);
+}
 
     /* Sections */
     section { padding: 80px 0; }
@@ -271,7 +297,7 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">Sobre Nosotros</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Variedades</a>
@@ -284,274 +310,161 @@
           </li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Galería</a></li>
           <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
         </ul>
       </div>
     </div>
   </nav>
+<!-- HERO BLOG -->
 
-<!-- Slider -->
-<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
-  </div>
+<section class="blog-hero py-5 text-center text-white">
+  <div class="container">
+    <span class="badge bg-light text-success px-3 py-2 mb-3">
+      🌿 Blog especializado en olivicultura
+    </span>
 
-  <div class="carousel-inner">
 
-   <!-- Slide 1 -->
-<div class="carousel-item active" style="background-image: url('images/home/banner-01.jpg');" role="img" aria-label="Olivos cultivados en vivero en Córdoba">
-  <div class="carousel-caption text-center">
-    <h1 data-aos="fade-up">Viveros Quintero CB</h1>
-    <p data-aos="fade-up" data-aos-delay="500">Gran producción de olivos con cientos de miles de plantas disponibles. Suministramos tanto a profesionales como a particulares.</p>
-    <a href="contact.html" class="btn btn-custom" data-aos="zoom-in" data-aos-delay="700">Solicitar Información</a>
-  </div>
-</div>
+<h1 class="display-4 fw-bold mb-3">
+  Blog del Olivo
+</h1>
 
-<!-- Slide 2 -->
-<div class="carousel-item" style="background-image: url('images/home/banner-02.jpg');" role="img" aria-label="Más de 30 años cultivando olivos de calidad">
-  <div class="carousel-caption text-center">
-    <h1 data-aos="fade-up">Más de 30 Años de Experiencia</h1>
-    <p data-aos="fade-up" data-aos-delay="500">En Viveros Quintero CB unimos la experiencia y la tradición agrícola con técnicas de cultivo modernas para ofrecer olivos de alta calidad, adaptados a las necesidades de cada cliente y con una excelente relación calidad-precio.
+<p class="lead mx-auto" style="max-width:800px;">
+  Consejos prácticos sobre plantación, variedades, cultivo en secano,
+  marcos de plantación y producción de olivos.
+  Compartimos nuestra experiencia tras más de 30 años dedicados al sector.
 </p>
-    <a href="about.html" class="btn btn-custom" data-aos="zoom-in" data-aos-delay="700">Conócenos</a>
-  </div>
-</div>
 
-<!-- Slide 3 -->
-<div class="carousel-item" style="background-image: url('images/home/palets.jpeg');" role="img" aria-label="Preparación y transporte de olivos">
-  <div class="carousel-caption text-center">
-    <h1 data-aos="fade-up">Producción y Logística Preparada</h1>
-<p data-aos="fade-up" data-aos-delay="500">
-Preparación en pallet y gestión de transporte para pedidos de gran volumen, garantizando una logística eficiente y segura.
-</p>    <a href="contact.html" class="btn btn-custom" data-aos="zoom-in" data-aos-delay="700">Solicitar Presupuesto</a>
-  </div>
-</div>
-
-<!-- Slide 4 -->
-<div class="carousel-item" style="background-image: url('images/home/banner-04.jpg');" role="img" aria-label="Productor de olivos en Córdoba">
-  <div class="carousel-caption text-center">
-    <h1 data-aos="fade-up">Productores Directos</h1>
-    <p data-aos="fade-up" data-aos-delay="500">Olivos cultivados directamente en nuestro vivero sin intermediarios con gran capacidad de producción y venta.</p>
-    <a href="contact.html" class="btn btn-custom" data-aos="zoom-in" data-aos-delay="700">Contacta con Nosotros</a>
-  </div>
-</div>
 
   </div>
+</section>
 
-  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
+<!-- ESTADÍSTICAS -->
+
+<section class="py-4 bg-light border-top border-bottom">
+  <div class="container">
+    <div class="row text-center">
+
+  <div class="col-md-4 mb-3">
+    <h3 class="fw-bold text-success">30+</h3>
+    <p class="mb-0">Años de experiencia</p>
+  </div>
+
+  <div class="col-md-4 mb-3">
+    <h3 class="fw-bold text-success">4</h3>
+    <p class="mb-0">Variedades disponibles</p>
+  </div>
+
+  <div class="col-md-4 mb-3">
+    <h3 class="fw-bold text-success">100%</h3>
+    <p class="mb-0">Producción propia</p>
+  </div>
+
 </div>
 
-<!-- Variedades de Olivos -->
-<section class="latest-blog py-5">
+  </div>
+</section>
+
+<!-- ARTÍCULOS -->
+
+<section class="py-5">
   <div class="container">
 
-    <!-- Título -->
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2 class="fw-bold">Variedades de Olivos</h2>
+<div class="text-center mb-5">
+  <h2>Últimos artículos</h2>
+  <p class="text-muted">
+    Información útil para agricultores, profesionales y particulares.
+  </p>
+</div>
 
-      <p class="text-muted mx-auto" style="max-width: 750px;">
-        En Viveros Quintero CB disponemos de diferentes variedades de olivos adaptadas 
-        a distintos tipos de cultivo y producción. Trabajamos con olivos de alta calidad 
-        para plantaciones intensivas, superintensivas, fincas agrícolas y particulares.
+<div class="row g-4">
+
+  <div class="col-lg-6">
+    <div class="article-card h-100 shadow-sm">
+
+      <div class="article-image">
+        <img src="images/blog/sistema-secano.jpg"
+             class="img-fluid rounded-top"
+             alt="Plantación de olivos en secano">
+      </div>
+
+      <div class="p-4">
+
+        <span class="badge bg-success mb-3">
+          Cultivo
+        </span>
+
+        <h3>
+          Cómo plantar olivos en secano
+        </h3>
+
+        <p>
+          Guía práctica para elegir variedades,
+          preparar el terreno y conseguir una plantación rentable.
+        </p>
+
+        <a href="blog/plantar-olivos-secano.html"
+           class="btn btn-success">
+           Leer artículo →
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+<div class="col-lg-6">
+  <div class="article-card h-100 shadow-sm">
+
+    <div class="article-image">
+      <img src="images/blog/01.jpg"
+           class="img-fluid rounded-top"
+           alt="Olivar tradicional intensivo y superintensivo comparación">
+    </div>
+
+    <div class="p-4">
+
+      <span class="badge bg-success mb-3">
+        Sistemas de cultivo
+      </span>
+
+      <h3>
+        Olivar tradicional, intensivo o superintensivo: diferencias, ventajas y qué sistema elegir
+      </h3>
+
+      <p>
+        Te explicamos las diferencias reales entre los tres sistemas de plantación de olivo y cuál es el más adecuado según tu finca, clima y objetivo productivo.
       </p>
+
+      <a href="blog/secano-intensivo-superintensivo.html"
+         class="btn btn-success">
+         Leer artículo →
+      </a>
+
     </div>
-
-   <!-- GRID -->
-<div class="row justify-content-center">
-
-  <!-- PICUAL -->
-  <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
-    <a href="variedades/olivo-picual.html" class="text-decoration-none">
-      <div class="variedad-card shadow-sm h-100">
-
-        <img src="images/home/picual-variedad.jpg"
-             class="w-100"
-             style="height: 240px; object-fit: cover;"
-             alt="Olivo Picual">
-
-        <div class="p-3 text-center">
-          <div class="variedad-title">Picual</div>
-          <div class="variedad-text">
-            Muy productiva y resistente. Alto rendimiento en aceite.
-          </div>
-        </div>
-
-<div class="variedad-overlay"></div>
-
-      </div>
-    </a>
   </div>
-
-  <!-- ARBEQUINA -->
-  <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
-    <a href="variedades/olivo-arbequina.html" class="text-decoration-none">
-      <div class="variedad-card shadow-sm h-100">
-
-        <img src="images/home/arbequina-variedad.jpg"
-             class="w-100"
-             style="height: 200px; object-fit: cover;"
-             alt="Olivo Arbequina">
-
-        <div class="p-3 text-center">
-          <div class="variedad-title">Arbequina</div>
-          <div class="variedad-text">
-            Porte reducido y producción temprana.
-          </div>
-        </div>
-
-<div class="variedad-overlay"></div>
-
-      </div>
-    </a>
-  </div>
-
-  <!-- HOJIBLANCA -->
-  <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-    <a href="variedades/olivo-hojiblanca.html" class="text-decoration-none">
-      <div class="variedad-card shadow-sm h-100">
-
-        <img src="images/home/hojiblanca-variedad.jpg"
-             class="w-100"
-             style="height: 200px; object-fit: cover;"
-             alt="Olivo Hojiblanca">
-
-        <div class="p-3 text-center">
-          <div class="variedad-title">Hojiblanca</div>
-          <div class="variedad-text">
-            Adaptación excelente y doble uso.
-          </div>
-        </div>
-<div class="variedad-overlay"></div>
-
-      </div>
-    </a>
-  </div>
-
-  <!-- ARBOSANA -->
-  <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="400">
-    <a href="variedades/olivo-arbosana.html" class="text-decoration-none">
-      <div class="variedad-card shadow-sm h-100">
-
-        <img src="images/home/arbosana-variedad.jpg"
-             class="w-100"
-             style="height: 240px; object-fit: cover;"
-             alt="Olivo Arbosana">
-
-        <div class="p-3 text-center">
-          <div class="variedad-title">Arbosana</div>
-          <div class="variedad-text">
-            Compacta y muy productiva.
-          </div>
-        </div>
-
-<div class="variedad-overlay"></div>
-
-      </div>
-    </a>
-  </div>
-
-</div>
-
 </div>
 </section>
 
+<!-- CTA -->
 
-<!-- Por qué elegirnos-->
-<section class="about-box-main bg-light">
-  <div class="container">
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2>Por qué confiar en Viveros Quintero C.B.</h2>
-<p>Especialistas en la producción y venta de olivos, con suministro directo sin intermediarios.</p>
-    </div>
-    <div class="row text-center">
-      
-  <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-  <h5>Calidad Profesional Garantizada</h5>
-  <p>Olivos cultivados en condiciones óptimas y preparados cuidadosamente en pallet para un transporte seguro.</p>
-</div>
+<section class="py-5 bg-success text-white">
+  <div class="container text-center">
 
-      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <h5>Experiencia y Trayectoria</h5>
-        <p>Más de 30 años combinando tradición y técnicas modernas en la crianza de olivos.</p>
-      </div>
+<h2 class="mb-3">
+  ¿Necesita asesoramiento para su plantación?
+</h2>
 
-      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-        <h5>Asesoramiento Personalizado</h5>
-        <p>Te guiamos desde la elección de la variedad hasta la logística y transporte, asegurando un suministro eficiente y profesional.</p>
-      </div>
+<p class="mb-4">
+  Nuestro equipo le ayudará a elegir la variedad más adecuada
+  según su finca y sistema de cultivo.
+</p>
 
-    </div>
-  </div>
-</section>
-
-  <!-- Beneficios de nuestros Olivos-->
-<section class="benefits py-5">
-  <div class="container">
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2>Ventajas de nuestros Olivos</h2>
-      <p>Descubre por qué tantos clientes confían en Viveros Quintero C.B.</p>
-    </div>
-    <div class="row text-center">
-
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-        <i class="fas fa-seedling fa-3x mb-3 text-success"></i>
-        <h5>Olivos Sanos y Resistentes</h5>
-        <p>Cultivados desde pequeños en nuestro vivero para garantizar plantas fuertes y de calidad.</p>
-      </div>
-
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-hand-holding-heart fa-3x mb-3 text-success"></i>
-        <h5>Directo del Criador</h5>
-        <p>Somos criadores de olivos y vendemos directamente, sin intermediarios ni reventa.</p>
-      </div>
-
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-        <i class="fas fa-truck fa-3x mb-3 text-success"></i>
-        <h5>Preparados para el Transporte</h5>
-        <p>Olivos organizados en pallets para facilitar su recogida o envío.</p>
-      </div>
-
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-        <i class="fas fa-leaf fa-3x mb-3 text-success"></i>
-        <h5>Variedades Seleccionadas</h5>
-        <p>Disponemos de variedades adaptadas a distintos suelos y condiciones de cultivo.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-<a href="https://wa.me/34666213683"
-   class="whatsapp-float"
-   target="_blank"
-   aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
+<a href="contact.html" class="btn btn-light btn-lg">
+  Solicitar información
 </a>
 
-
-
-
-
-
-
-
-
-
+  </div>
+</section>
 
 <!-- Footer -->
 <footer class="bg-dark text-light pt-5 pb-3">

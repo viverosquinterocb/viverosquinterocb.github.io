@@ -4,13 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Favicon -->
-<link rel="icon" type="image/png" href="images/logo/icon.png">
+<link rel="icon" type="image/png" href="../images/logo/icon.png">
 
 <title>Viveros Quintero CB | Inicio | Producción y venta de planta de olivo</title>
-<link rel="preload" href="images/home/banner-02.jpg" as="image">
-<link rel="preload" href="images/home/banner-03.jpg" as="image">
-<link rel="preload" href="images/home/palets.jpeg" as="image">
-<link rel="preload" href="images/home/banner-04.jpg" as="image">
+
 
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -105,9 +102,38 @@
       transform: translateY(0);
     }
 
-    /* Carousel indicators */
-    .carousel-indicators [data-bs-target] { background-color: #ccc; }
-    .carousel-indicators .active { background-color: #7a9e3f; }
+   .blog-hero{
+background:linear-gradient(
+rgba(0,0,0,.45),
+rgba(0,0,0,.45)
+),
+url('images/home/banner-01.jpg');
+background-size:cover;
+background-position:center;
+}
+
+.article-card{
+border-radius:16px;
+overflow:hidden;
+transition:.35s;
+background:#fff;
+}
+
+.article-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.article-card img{
+height:260px;
+width:100%;
+object-fit:cover;
+transition:.4s;
+}
+
+.article-card:hover img{
+transform:scale(1.05);
+}
 
     /* Sections */
     section { padding: 80px 0; }
@@ -265,13 +291,13 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light navbar-custom sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><img src="images/logo/logotipo.png" alt="Viveros Quintero C.B."></a>
+      <a class="navbar-brand" href="index.html"><img src="../images/logo/logotipo.png" alt="Viveros Quintero C.B."></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">Sobre Nosotros</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Variedades</a>
@@ -284,271 +310,350 @@
           </li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Galería</a></li>
           <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link active" href="../blog.html">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-<!-- Slider -->
-<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
-  </div>
 
-  <div class="carousel-inner">
 
-   <!-- Slide 1 -->
-<div class="carousel-item active" style="background-image: url('images/home/banner-01.jpg');" role="img" aria-label="Olivos cultivados en vivero en Córdoba">
-  <div class="carousel-caption text-center">
-    <h1 data-aos="fade-up">Viveros Quintero CB</h1>
-    <p data-aos="fade-up" data-aos-delay="500">Gran producción de olivos con cientos de miles de plantas disponibles. Suministramos tanto a profesionales como a particulares.</p>
-    <a href="contact.html" class="btn btn-custom" data-aos="zoom-in" data-aos-delay="700">Solicitar Información</a>
-  </div>
-</div>
 
-<!-- Slide 2 -->
-<div class="carousel-item" style="background-image: url('images/home/banner-02.jpg');" role="img" aria-label="Más de 30 años cultivando olivos de calidad">
-  <div class="carousel-caption text-center">
-    <h1 data-aos="fade-up">Más de 30 Años de Experiencia</h1>
-    <p data-aos="fade-up" data-aos-delay="500">En Viveros Quintero CB unimos la experiencia y la tradición agrícola con técnicas de cultivo modernas para ofrecer olivos de alta calidad, adaptados a las necesidades de cada cliente y con una excelente relación calidad-precio.
-</p>
-    <a href="about.html" class="btn btn-custom" data-aos="zoom-in" data-aos-delay="700">Conócenos</a>
-  </div>
-</div>
 
-<!-- Slide 3 -->
-<div class="carousel-item" style="background-image: url('images/home/palets.jpeg');" role="img" aria-label="Preparación y transporte de olivos">
-  <div class="carousel-caption text-center">
-    <h1 data-aos="fade-up">Producción y Logística Preparada</h1>
-<p data-aos="fade-up" data-aos-delay="500">
-Preparación en pallet y gestión de transporte para pedidos de gran volumen, garantizando una logística eficiente y segura.
-</p>    <a href="contact.html" class="btn btn-custom" data-aos="zoom-in" data-aos-delay="700">Solicitar Presupuesto</a>
-  </div>
-</div>
 
-<!-- Slide 4 -->
-<div class="carousel-item" style="background-image: url('images/home/banner-04.jpg');" role="img" aria-label="Productor de olivos en Córdoba">
-  <div class="carousel-caption text-center">
-    <h1 data-aos="fade-up">Productores Directos</h1>
-    <p data-aos="fade-up" data-aos-delay="500">Olivos cultivados directamente en nuestro vivero sin intermediarios con gran capacidad de producción y venta.</p>
-    <a href="contact.html" class="btn btn-custom" data-aos="zoom-in" data-aos-delay="700">Contacta con Nosotros</a>
-  </div>
-</div>
 
-  </div>
 
-  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
 
-<!-- Variedades de Olivos -->
-<section class="latest-blog py-5">
-  <div class="container">
 
-    <!-- Título -->
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2 class="fw-bold">Variedades de Olivos</h2>
 
-      <p class="text-muted mx-auto" style="max-width: 750px;">
-        En Viveros Quintero CB disponemos de diferentes variedades de olivos adaptadas 
-        a distintos tipos de cultivo y producción. Trabajamos con olivos de alta calidad 
-        para plantaciones intensivas, superintensivas, fincas agrícolas y particulares.
-      </p>
-    </div>
-
-   <!-- GRID -->
+<section class="container py-5">
 <div class="row justify-content-center">
+<div class="col-lg-10">
 
-  <!-- PICUAL -->
-  <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
-    <a href="variedades/olivo-picual.html" class="text-decoration-none">
-      <div class="variedad-card shadow-sm h-100">
+<h1 class="mb-4">
+Olivar tradicional, intensivo o superintensivo: diferencias, costes, ventajas y qué sistema elegir
+</h1>
 
-        <img src="images/home/picual-variedad.jpg"
-             class="w-100"
-             style="height: 240px; object-fit: cover;"
-             alt="Olivo Picual">
+<p class="lead">
+A la hora de iniciar una nueva plantación de olivos, la elección del sistema de cultivo es una de las decisiones más importantes. No solo condiciona la inversión inicial, sino también la forma de trabajar la finca durante toda su vida productiva.
+</p>
 
-        <div class="p-3 text-center">
-          <div class="variedad-title">Picual</div>
-          <div class="variedad-text">
-            Muy productiva y resistente. Alto rendimiento en aceite.
-          </div>
-        </div>
+<p>
+En esta guía comparamos de forma clara los tres sistemas principales de plantación: olivar tradicional, intensivo y superintensivo, analizando sus diferencias reales en costes, manejo, recolección, dificultad de implantación y variedades recomendadas.
+</p>
 
-<div class="variedad-overlay"></div>
+<!-- FOTO PRINCIPAL -->
+<div class="my-4">
+<img src="../images/blog/comparativa-olivar.jpg" class="img-fluid rounded shadow" alt="Comparativa entre olivar tradicional intensivo y superintensivo">
+<small class="text-muted d-block mt-2">Comparativa visual entre los tres sistemas de cultivo del olivo.</small>
+</div>
 
-      </div>
-    </a>
-  </div>
 
-  <!-- ARBEQUINA -->
-  <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
-    <a href="variedades/olivo-arbequina.html" class="text-decoration-none">
-      <div class="variedad-card shadow-sm h-100">
+<h2>1. ¿Qué sistema de olivar es mejor?</h2>
 
-        <img src="images/home/arbequina-variedad.jpg"
-             class="w-100"
-             style="height: 200px; object-fit: cover;"
-             alt="Olivo Arbequina">
+<p>
+No existe un sistema “mejor” de forma general. La elección depende de factores clave como la disponibilidad de agua, el tipo de suelo, la inversión inicial y el objetivo productivo de la explotación.
+</p>
 
-        <div class="p-3 text-center">
-          <div class="variedad-title">Arbequina</div>
-          <div class="variedad-text">
-            Porte reducido y producción temprana.
-          </div>
-        </div>
+<p>
+En zonas de secano sigue predominando el olivar tradicional, mientras que en explotaciones con riego y enfoque más productivo han ganado peso el olivar intensivo y superintensivo.
+</p>
 
-<div class="variedad-overlay"></div>
 
-      </div>
-    </a>
-  </div>
+<h2>2. Comparativa rápida de sistemas</h2>
 
-  <!-- HOJIBLANCA -->
-  <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-    <a href="variedades/olivo-hojiblanca.html" class="text-decoration-none">
-      <div class="variedad-card shadow-sm h-100">
+<div class="table-responsive my-4">
+<table class="table table-bordered">
+<thead>
+<tr>
+<th></th>
+<th>Tradicional</th>
+<th>Intensivo</th>
+<th>Superintensivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Inversión inicial</strong></td>
+<td>Baja</td>
+<td>Media</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><strong>Necesidad de agua</strong></td>
+<td>Baja</td>
+<td>Media</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><strong>Entrada en producción</strong></td>
+<td>Lenta</td>
+<td>Media</td>
+<td>Rápida</td>
+</tr>
+<tr>
+<td><strong>Dificultad de manejo</strong></td>
+<td>Baja</td>
+<td>Media</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><strong>Recolección</strong></td>
+<td>Más lenta</td>
+<td>Rápida</td>
+<td>Muy rápida</td>
+</tr>
+</tbody>
+</table>
+</div>
 
-        <img src="images/home/hojiblanca-variedad.jpg"
-             class="w-100"
-             style="height: 200px; object-fit: cover;"
-             alt="Olivo Hojiblanca">
 
-        <div class="p-3 text-center">
-          <div class="variedad-title">Hojiblanca</div>
-          <div class="variedad-text">
-            Adaptación excelente y doble uso.
-          </div>
-        </div>
-<div class="variedad-overlay"></div>
+<hr>
 
-      </div>
-    </a>
-  </div>
 
-  <!-- ARBOSANA -->
-  <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="400">
-    <a href="variedades/olivo-arbosana.html" class="text-decoration-none">
-      <div class="variedad-card shadow-sm h-100">
+<h2>3. Olivar tradicional</h2>
 
-        <img src="images/home/arbosana-variedad.jpg"
-             class="w-100"
-             style="height: 240px; object-fit: cover;"
-             alt="Olivo Arbosana">
+<p>
+El olivar tradicional es el sistema más extendido históricamente en España, especialmente en secano. Se caracteriza por marcos amplios, árboles de gran porte y menor densidad de plantación.
+</p>
 
-        <div class="p-3 text-center">
-          <div class="variedad-title">Arbosana</div>
-          <div class="variedad-text">
-            Compacta y muy productiva.
-          </div>
-        </div>
+<div class="my-4">
+<img src="../images/blog/olivar-tradicional.jpg" class="img-fluid rounded shadow" alt="Olivar tradicional">
+<small class="text-muted d-block mt-2">Olivar tradicional con marcos amplios de plantación.</small>
+</div>
 
-<div class="variedad-overlay"></div>
+<div class="p-3 bg-light rounded my-4">
+<strong>📋 Ficha rápida</strong><br>
+• Marco: 8x8 a 10x10 m<br>
+• Densidad: 60–100 olivos por fanega<br>
+• Sistema habitual: secano<br>
+• Inversión: baja<br>
+• Producción inicial: lenta<br>
+• Vida útil: muy alta
+</div>
 
-      </div>
-    </a>
-  </div>
+<h3>Ventajas</h3>
+<ul>
+<li>Menor inversión inicial.</li>
+<li>Excelente adaptación a secano.</li>
+<li>Menor dependencia de agua.</li>
+<li>Mayor longevidad del árbol.</li>
+</ul>
 
+<h3>Desventajas</h3>
+<ul>
+<li>Entrada en producción más lenta.</li>
+<li>Menor producción por superficie.</li>
+<li>Recolección más costosa y lenta.</li>
+</ul>
+
+<h3>Dificultad de plantación</h3>
+<p>
+Es el sistema más sencillo de implantar. Puede realizarse de forma manual en pequeñas fincas o con maquinaria (ahoyadora o plantadora) en superficies mayores.
+</p>
+
+<h3>Recolección</h3>
+<p>
+Se realiza habitualmente con vibrador de tronco y paraguas invertido. Es un sistema eficiente, aunque más lento que en modelos intensivos.
+</p>
+
+<h3>Variedades recomendadas</h3>
+
+<div class="row my-4">
+
+<div class="col-12 mb-3">
+<div class="p-3 border rounded bg-light">
+<strong>🌿 Picual</strong>
+<p class="mb-0">
+Es la opción más estable en secano. Se comporta como un “sueldo fijo”: producción más constante año tras año, incluso en condiciones difíciles, lo que la hace muy segura en explotaciones donde se busca estabilidad.
+</p>
+</div>
+</div>
+
+<div class="col-12">
+<div class="p-3 border rounded">
+<strong>🌿 Hojiblanca</strong>
+<p class="mb-0">
+Funciona mejor cuando el terreno y la lluvia acompañan. Es más “variable”: en buenas condiciones puede rendir más y dar muy buen aceite, pero en años secos su producción fluctúa más. Por eso se utiliza en secanos medios o fincas con mejores suelos.
+</p>
+</div>
 </div>
 
 </div>
-</section>
 
+<hr>
 
-<!-- Por qué elegirnos-->
-<section class="about-box-main bg-light">
-  <div class="container">
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2>Por qué confiar en Viveros Quintero C.B.</h2>
-<p>Especialistas en la producción y venta de olivos, con suministro directo sin intermediarios.</p>
-    </div>
-    <div class="row text-center">
-      
-  <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-  <h5>Calidad Profesional Garantizada</h5>
-  <p>Olivos cultivados en condiciones óptimas y preparados cuidadosamente en pallet para un transporte seguro.</p>
+<h2>4. Olivar intensivo</h2>
+
+<p>
+El olivar intensivo se basa en aumentar la densidad de plantación para mejorar la producción por superficie, manteniendo aún un sistema compatible con recolección mecanizada mediante vibrador de tronco.
+</p>
+
+<div class="my-4">
+<img src="../images/blog/olivar-intensivo.jpg" class="img-fluid rounded shadow" alt="Olivar intensivo">
+<small class="text-muted d-block mt-2">Plantación intensiva de olivo con marcos más cerrados.</small>
 </div>
 
-      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <h5>Experiencia y Trayectoria</h5>
-        <p>Más de 30 años combinando tradición y técnicas modernas en la crianza de olivos.</p>
-      </div>
+<div class="p-3 bg-light rounded my-4">
+<strong>📋 Ficha rápida</strong><br>
+• Marco habitual: 6x6 a 7x7 m<br>
+• Densidad: media-alta<br>
+• Sistema: regadío o secano favorable<br>
+• Mecanización: vibrador de tronco<br>
+• Inversión: media<br>
+• Entrada en producción: media
+</div>
 
-      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-        <h5>Asesoramiento Personalizado</h5>
-        <p>Te guiamos desde la elección de la variedad hasta la logística y transporte, asegurando un suministro eficiente y profesional.</p>
-      </div>
+<h3>Ventajas</h3>
+<ul>
+<li>Mayor producción por superficie respecto al tradicional.</li>
+<li>Entrada en producción más rápida.</li>
+<li>Buena mecanización de la recolección.</li>
+</ul>
 
-    </div>
-  </div>
-</section>
+<h3>Desventajas</h3>
+<ul>
+<li>Mayor necesidad de agua o condiciones de suelo favorables.</li>
+<li>Mayor inversión inicial.</li>
+<li>Requiere planificación precisa del marco.</li>
+</ul>
 
-  <!-- Beneficios de nuestros Olivos-->
-<section class="benefits py-5">
-  <div class="container">
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2>Ventajas de nuestros Olivos</h2>
-      <p>Descubre por qué tantos clientes confían en Viveros Quintero C.B.</p>
-    </div>
-    <div class="row text-center">
+<h3>Dificultad de plantación</h3>
+<p>
+Es un sistema que requiere precisión en el diseño de la plantación. En explotaciones medianas y grandes es habitual el uso de GPS o plantadoras mecanizadas para asegurar alineación y uniformidad.
+</p>
 
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-        <i class="fas fa-seedling fa-3x mb-3 text-success"></i>
-        <h5>Olivos Sanos y Resistentes</h5>
-        <p>Cultivados desde pequeños en nuestro vivero para garantizar plantas fuertes y de calidad.</p>
-      </div>
+<h3>Recolección</h3>
+<p>
+Se realiza principalmente con vibrador de tronco y paraguas invertido, lo que permite una recolección más rápida y eficiente que en sistemas tradicionales.
+</p>
 
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-hand-holding-heart fa-3x mb-3 text-success"></i>
-        <h5>Directo del Criador</h5>
-        <p>Somos criadores de olivos y vendemos directamente, sin intermediarios ni reventa.</p>
-      </div>
+<h3>Variedades recomendadas</h3>
 
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-        <i class="fas fa-truck fa-3x mb-3 text-success"></i>
-        <h5>Preparados para el Transporte</h5>
-        <p>Olivos organizados en pallets para facilitar su recogida o envío.</p>
-      </div>
+<div class="row my-4">
 
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-        <i class="fas fa-leaf fa-3x mb-3 text-success"></i>
-        <h5>Variedades Seleccionadas</h5>
-        <p>Disponemos de variedades adaptadas a distintos suelos y condiciones de cultivo.</p>
-      </div>
+<div class="col-md-6 mb-3">
+<div class="p-3 border rounded bg-light">
+<strong>🌿 Arbequina</strong>
+<p class="mb-0">
+Variedad muy utilizada en intensivo por su precocidad, porte medio y buena adaptación a marcos más cerrados.
+</p>
+</div>
+</div>
 
-    </div>
-  </div>
-</section>
+<div class="col-md-6 mb-3">
+<div class="p-3 border rounded">
+<strong>🌿 Arbosana</strong>
+<p class="mb-0">
+Variedad de menor vigor, muy estable en producción y especialmente interesante en sistemas mecanizados.
+</p>
+</div>
+</div>
 
-
-
-
+</div>
 
 
 
-<a href="https://wa.me/34666213683"
-   class="whatsapp-float"
-   target="_blank"
-   aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
+<hr>
+
+
+<h2>5. Olivar superintensivo</h2>
+
+<p>
+El olivar superintensivo o en seto es el sistema más moderno. Permite la recolección mecanizada con cosechadora cabalgante y una entrada en producción muy rápida.
+</p>
+
+<div class="my-4">
+<img src="../images/blog/olivar-superintensivo.jpg" class="img-fluid rounded shadow" alt="Olivar superintensivo">
+<small class="text-muted d-block mt-2">Olivar en seto preparado para recolección mecanizada.</small>
+</div>
+
+<div class="p-3 bg-light rounded my-4">
+<strong>📋 Ficha rápida</strong><br>
+• Sistema: seto continuo<br>
+• Alta densidad de plantación<br>
+• Riego: prácticamente obligatorio<br>
+• Inversión: alta<br>
+• Producción: muy rápida
+</div>
+
+<h3>Ventajas</h3>
+<ul>
+<li>Entrada en producción muy rápida.</li>
+<li>Recolección muy eficiente.</li>
+<li>Menor dependencia de mano de obra.</li>
+</ul>
+
+<h3>Desventajas</h3>
+<ul>
+<li>Alta inversión inicial.</li>
+<li>Dependencia del riego.</li>
+<li>Poda y manejo más técnico.</li>
+</ul>
+
+<h3>Dificultad de plantación</h3>
+<p>
+Es el sistema más exigente. Requiere planificación precisa, nivelación del terreno y maquinaria especializada para formar correctamente el seto.
+</p>
+
+<h3>Recolección</h3>
+<p>
+Se realiza con cosechadora cabalgante, lo que permite recolectar grandes superficies en muy poco tiempo.
+</p>
+
+<h3>Variedades recomendadas</h3>
+
+<div class="row my-4">
+
+<div class="col-md-6 mb-3">
+<div class="p-3 border rounded bg-light">
+<strong>🌿 Arbequina</strong>
+<p class="mb-0">La variedad más utilizada en seto por su bajo vigor y rápida entrada en producción.</p>
+</div>
+</div>
+
+<div class="col-md-6 mb-3">
+<div class="p-3 border rounded">
+<strong>🌿 Arbosana</strong>
+<p class="mb-0">Muy buena productividad y control de vigor en sistemas intensivos en seto.</p>
+</div>
+</div>
+
+</div>
+
+
+<hr>
+
+
+<h2>6. ¿Qué sistema elegir?</h2>
+
+<p>
+Si la finca es de secano y con recursos limitados, el sistema tradicional sigue siendo el más seguro. En cambio, si existe disponibilidad de agua y una visión más productiva, el intensivo o superintensivo pueden ofrecer mayor rentabilidad a largo plazo.
+</p>
+
+<p>
+La decisión debe basarse siempre en las condiciones reales de la finca, no únicamente en el sistema más moderno.
+</p>
+
+
+<div class="bg-light p-4 rounded mt-5 border-start border-4 border-success">
+
+<h3>¿Está pensando en plantar olivos?</h3>
+
+<p>
+En Viveros Quintero CB le asesoramos sobre el sistema y la variedad más adecuada para su finca, ya sea tradicional, intensivo o superintensivo.
+</p>
+
+<a href="../contact.html" class="btn btn-success">
+Solicitar información
 </a>
 
+</div>
 
-
-
-
-
-
+</div>
+</div>
+</section>
 
 
 
