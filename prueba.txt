@@ -1,0 +1,27 @@
+<h3>Variedades recomendadas</h3>
+
+<div class="row my-4">
+
+<div class="col-md-6 mb-3">
+<div class="p-3 border rounded bg-light">
+<strong>🌿 Hojiblanca</strong>
+<p class="mb-0">
+Una de las variedades más utilizadas en olivar intensivo mecanizado. Destaca por su buen comportamiento frente a la recolección con vibrador de tronco y paraguas invertido, además de ofrecer una elevada productividad y buena adaptación a diferentes condiciones de cultivo.
+</p>
+</div>
+</div>
+
+<div class="col-md-6 mb-3">
+<div class="p-3 border rounded">
+<strong>🌿 Picual</strong>
+<p class="mb-0">
+Variedad muy extendida por su rusticidad, vigor y alta productividad. Su estructura y comportamiento agronómico permiten una mecanización eficiente de la recolección en plantaciones intensivas.
+</p>
+</div>
+</div>
+
+</div>
+
+<p>
+Según la zona y las características de la explotación, otras variedades como <strong>Cornicabra</strong>, <strong>Lechín</strong> o incluso <strong>Manzanilla Cacereña</strong> también pueden resultar interesantes para sistemas intensivos con recolección mecanizada mediante vibrador de tronco.
+</p>
